@@ -62,7 +62,6 @@ proc lshExecute(args: seq[string]) =
       echo "   The following are built in:"
       for i in builsIncommand:
         echo fmt"     {i}"
-      echo ""
     else:
       echo "help: too many arguments"
     return
@@ -98,6 +97,7 @@ proc tokenize(args: var seq[string]) =
 proc lshLoop() =
 
   doWhile bool(status):
+    echo ""
     var args: seq[string]   # トークン列
     stdout.write fmt"[{getCurrentDir()}]$ "
     line = readLine(stdin)
