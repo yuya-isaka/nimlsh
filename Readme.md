@@ -13,6 +13,7 @@
     - help 
 
 ## TODO
+- modify case statement
 - cat
 - echo
 - wc
