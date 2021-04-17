@@ -21,3 +21,4 @@
 - touch
 - cd ../.. etc
 - cp
+- pipeline
