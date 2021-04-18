@@ -56,8 +56,7 @@ proc lshExecute(args: seq[string]) =
     return
   of "help":
     if len(args) == 1:
-      echo ""
-      echo "  [nimlsh]"
+      echo "\n  [nimlsh]"
       echo "   Type program names and argumetns, and hit enter."
       echo "   The following are built in:"
       for i in builsIncommand:
@@ -97,9 +96,8 @@ proc tokenize(args: var seq[string]) =
 proc lshLoop() =
 
   doWhile bool(status):
-    echo ""
     var args: seq[string]   # トークン列
-    stdout.write fmt"[{getCurrentDir()}]$ "
+    stdout.write fmt"\n[{getCurrentDir()}]$ "
     line = readLine(stdin)
     tokenize(args)
     lshExecute(args)
