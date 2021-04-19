@@ -97,7 +97,8 @@ proc lshLoop() =
 
   doWhile bool(status):
     var args: seq[string]   # トークン列
-    stdout.write fmt"\n[{getCurrentDir()}]$ "
+    echo ""
+    stdout.write fmt"[{getCurrentDir()}]$ "
     line = readLine(stdin)
     tokenize(args)
     lshExecute(args)
